@@ -13,10 +13,11 @@
 var dt = require('./myfirstModule')//accessing the module which is created  to use the external module.
 //The example is to show the current date and time on the server.
 http.createServer(function(req,res){
-  res.writeHead(200,{'content-Type':'text/html'});
-  res.write("The date and time are currently: "+dt.myDateTime());
-  res.end("Completed!")
-}).listen(8080)
+  res.writeHead(200,{'content-Type':'text/html'});//write a response to client
+  res.write("The date and time are currently: "+dt.myDateTime());//write a response to client
+  res.end("Completed!")//end the response.
+}).listen(8080)//the server object listen on port 8080
+
 
 
 /*
